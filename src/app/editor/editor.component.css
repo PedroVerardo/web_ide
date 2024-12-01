@@ -1,0 +1,38 @@
+#editor {
+    font-size: 18px;
+    height: 100%;
+    border-radius: 30px;
+  }
+
+button {
+    border-radius: 30px;
+    font-size: 22px;
+    margin: 10px;
+    cursor: pointer;
+    border-color: green;
+  }
+
+button:hover {
+    background-color: green;
+    color: white;
+  }
+
+.conf-options {
+    display: flex;
+    justify-content: center;
+}
+
+.output-container {
+    position: fixed; /* Fixa a posição */
+    color:aliceblue;
+    font-size: 16px;
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Largura total da tela */
+    height: 20%; /* Ocupa os últimos 20% da tela */
+    background-color: #353a42; /* Fundo claro */
+    border-top: 1px solid #ccc; /* Borda superior */
+    padding: 10px;
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1); /* Sombra superior */
+    overflow-y: auto; /* Adiciona rolagem se o conteúdo for grande */
+  }
