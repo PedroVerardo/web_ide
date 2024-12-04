@@ -4,14 +4,11 @@ import { AppComponent } from './app.component';
 import { EditorModule } from './editor/editor.module'; // Importa o EditorModule
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [],
   imports: [
     BrowserModule,
     EditorModule // Adiciona o módulo que contém o EditorComponent
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: []
 })
 export class AppModule { }

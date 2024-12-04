@@ -39,8 +39,23 @@ export class EditorComponent implements OnInit {
 
   runCode() {
     if (this.editor) {
-      const code = this.editor.state.doc.toString(); // Obtém o texto do editor
-      console.log('Código executado:', code); // Loga no console
+      const code = this.editor.state.doc.toString();
+      console.log('Código executado:', code);
+      fetch('localhost:4848', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ code })
+      })
+      .then(response => response.json())
+      .then(data => {
+        this.output = data.result;
+        console.log('Resultado da execução:', this.output);
+      })
+      .catch(error => {
+        console.error('Erro ao executar o código:', error);
+      });
     }
   }
 
